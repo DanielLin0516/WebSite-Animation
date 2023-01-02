@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./index.css">
   <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
 </head>
+
 <body>
-  
+  <div class="content">
+    <div class="char">a</div>
+    <div class="char">b</div>
+    <div class="char">c</div>
+    <div class="char">d</div>
+    <div class="char">e</div>
+    <div class="char">f</div>
+    <div class="char">g</div>
+    <div class="char">h</div>
+    <div class="char">i</div>
+    <div class="char">j</div>
+  </div>
+  <script>
+    const t = gsap.timeline({});
+    t.to(".char", {
+      opacity: 1,
+      delay: .1,
+      duration: .5,
+      y: 0,
+      ease: "Power4.inOut",
+      stagger: 0.1,
+    })
+  </script>
 </body>
+
 </html>
